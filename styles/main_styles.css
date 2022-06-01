@@ -697,21 +697,25 @@ section {
     width: 100%;
 }
 
-.home_content_inner {
-    width: 550px;
-}
-
 .home_title h1 {
     font-size: 69.24px;
     font-weight: 900;
     color: white;
     line-height: 1.0398;
+    max-width: 750px;
+}
+
+.home_about_icon img{
+    width: 40px;
+    height: auto;
+    padding-right: 10px;
 }
 
 .home_text {
     padding-right: 20px;
     margin-top: 10px;
     padding-left: 3px;
+    max-width: 550px;
 }
 
 .home_text p {
@@ -725,6 +729,70 @@ section {
     margin-top: 34px;
     margin-left: 3px;
 }
+
+/*********************************
+- Zorggebieden
+*********************************/
+
+.zorggebieden_container {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(133deg, rgba(2, 0, 36, 1) 0%, rgba(40, 50, 144, 0.804359243697479) 82%, rgba(32, 211, 74, 1) 100%);
+    padding-top: 75px;
+    padding-bottom: 75px;
+    color: white;
+
+}
+
+.zorggebieden_container h1 {
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+.zorggebieden_container strong {
+    color: #20D34A;
+}
+
+.zorggebieden_container .row {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.circle {
+    background: #20D34A;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    margin: 0 0 0 -33px;
+}
+
+.zorggebieden_container p {
+    color: white;
+    float: left;
+    margin: -27px 0 0 0;
+    width: 200px;
+    text-align: left;
+}
+
+.zorggebieden_container .setBack {
+    margin: 0 0 0 27px;
+}
+
+.zorggebieden_container .zorgRow .col-sm-6 {
+    padding: 5px 10px;
+}
+
+@media (max-width: 570px) {
+    .zorggebieden_container .zorgRow {
+        padding-left: 40px;
+    }
+
+
+    .zorggebieden_container h1 {
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+}
+
 
 /*********************************
 6. Boxes
@@ -1311,3 +1379,4 @@ section {
 .footer_social ul li a i:hover {
     color: #FFFFFF;
 }
+

@@ -402,7 +402,11 @@ section
 	left: 0;
 	width: 100%;
 }
-
+.home_about_icon img{
+	width: 40px;
+	height: auto;
+	padding-right: 10px;
+}
 .logo_container {
 	position: absolute;
 	top: 0;

@@ -189,9 +189,9 @@
 		center: false,
 		rewind: false,
 
-		mouseDrag: true,
-		touchDrag: true,
-		pullDrag: true,
+		mouseDrag: false,
+		touchDrag: false,
+		pullDrag: false,
 		freeDrag: false,
 
 		margin: 0,
