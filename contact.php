@@ -1,8 +1,16 @@
+<?php
+if (isset($_POST["bedrijfnaam"])) {
+    require "SendMail.php";
+    echo "<div>test</div>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contact</title>
+    <title>ZefiZorg - Contact</title>
     <meta charset="utf-8">
+    <link rel="icon" href="images/logoSmall.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="ZefiZorg uitzend bureau">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,11 +36,11 @@
                 <div class="row">
                     <div class="col">
                         <div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
-                            <div class="top_bar_item"><a href="contact.html">Neem contact op</a></div>
-                            <div class="top_bar_item"><a href="contact.html">Maak een afspraak</a></div>
+                            <div class="top_bar_item"><a href="contact.php">Neem contact op</a></div>
+                            <div class="top_bar_item"><a href="contact.php">Maak een afspraak</a></div>
                             <div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto">
                                 <div class="home_about_icon"><img src="images/phone-call.svg" alt=""></div>
-                                : +563 47558 623
+                                +31 687042813
 
                             </div>
                         </div>
@@ -54,7 +62,7 @@
                                     <li><a href="about.html">Over ons</a></li>
                                     <li><a href="zorgaanbieders.html">Voor zorgaanbieders</a></li>
                                     <li><a href="zorgprofessionals.html">Voor zorgprofessionals</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </nav>
                             <div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
@@ -105,13 +113,13 @@
                     <li class="menu_item menu_mm"><a href="about.html">Over ons</a></li>
                     <li class="menu_item menu_mm"><a href="zorgaanbieders.html">Voor zorgaanbieders</a></li>
                     <li class="menu_item menu_mm"><a href="zorgprofessionals.html">Voor zorgprofessionals</a></li>
-                    <li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
+                    <li class="menu_item menu_mm"><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
 
             <div class="menu_extra">
-                <div class="menu_appointment"><a href="contact.html">Maak een afspraak</a></div>
-                <div class="menu_emergencies"><strong style="font-size: 1.3em;">✆</strong> +563 47558 623</div>
+                <div class="menu_appointment"><a href="contact.php">Maak een afspraak</a></div>
+                <div class="menu_emergencies"><strong style="font-size: 1.3em;">✆</strong> +31 687042813</div>
             </div>
 
         </div>
@@ -152,14 +160,12 @@
                 <div class="col-lg-6">
                     <div class="section_title"><h2>Neem contact op</h2></div>
                     <div class="contact_text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus quis est
-                            ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin. Aliquam nec dapibus
-                            massa.</p>
+                        <p>Neem vrijblijvend contact met ons op.</p>
                     </div>
                     <ul class="contact_about_list">
                         <li>
                             <div class="contact_about_icon"><img src="images/phone-call.svg" alt=""></div>
-                            <span>+45 677 8993000 223</span></li>
+                            <span>+31 687042813</span></li>
                         <li>
                             <div class="contact_about_icon"><img src="images/envelope.svg" alt=""></div>
                             <span>info@zefizorg.nl</span></li>
@@ -175,84 +181,52 @@
                 <!-- Contact Form -->
                 <div class="col-lg-6 form_col">
                     <div class="contact_form_container">
-                        <form action="#" id="contact_form" class="contact_form">
+                        <form method="post" action="SendMail.php" id="contact_form" class="contact_form">
                             <div class="row">
                                 <div class="col-md-6 input_col">
                                     <div class="input_container input_name">
-                                        <label for="naamContact">Naam</label>
-                                        <input id="naamContact" type="text" class="contact_input" placeholder="Naam" required="required">
+                                        <label for="bedrijfnaam">Bedrijfsnaam</label>
+                                        <input name="bedrijfnaam" id="bedrijfnaam" type="text" class="contact_input"
+                                               placeholder="Naam">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 input_col">
+                                    <div class="input_container input_name">
+                                        <label for="naamContact">Volledige naam</label>
+                                        <input name="naamContact" id="naamContact" type="text" class="contact_input"
+                                               placeholder="Naam" required="required">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 input_col">
+                                    <div class="input_container input_number">
+                                        <label for="emailContact">E-mail</label>
+                                        <input name="emailContact" id="emailContact" type="email" class="contact_input"
+                                               placeholder="E-mail"
+                                               required="required">
                                     </div>
                                 </div>
                                 <div class="col-md-6 input_col">
                                     <div class="input_container">
                                         <label for="nmbContact">Telefoonnummer</label>
-                                        <input id="nmbContact" type="number" class="contact_input" placeholder="Telefoonnummer"
+                                        <input name="nmbContact" id="nmbContact" type="number" class="contact_input"
+                                               placeholder="Telefoonnummer"
                                                required="required">
                                     </div>
                                 </div>
                             </div>
-                            <div class="input_container input_number">
-                                <label for="emailContact">E-mail</label>
-                                <input id="emailContact" type="email" class="contact_input" placeholder="E-mail"
-                                       required="required">
-                            </div>
-
-
                             <div class="input_container">
-                                <label for="vraagContact">Beschrijf je vraag</label>
-                                <textarea id="vraagContact" class="contact_input contact_text_area" placeholder="Beschrijf je vraag"
-                                          required="required">
-
-                                </textarea>
+                                <label for="vraagContact">Bericht</label>
+                                <textarea name="vraagContact" id="vraagContact" class="contact_input contact_text_area"
+                                          placeholder="Beschrijf je vraag"
+                                          required="required"></textarea>
                             </div>
-                            <button type="submit" class="button contact_button"><a>Verstuur</a></button>
+                            <button type="submit" name="submit" value="Submit" class="button contact_button">
+                                <a>Verstuur</a></button>
                         </form>
                     </div>
-                </div>
-            </div>
-            <div class="row map_row">
-                <div class="col">
-
-                    <!-- Contact Map -->
-
-                    <div class="contact_map">
-
-                        <!-- Google Map -->
-
-                        <div class="map">
-                            <div id="google_map" class="google_map">
-                                <div class="map_container">
-                                    <div id="map"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Working Hours -->
-                        <div class="box working_hours">
-                            <div class="box_icon d-flex flex-column align-items-start justify-content-center">
-                                <div style="width:29px; height:29px;"><img src="images/alarm-clock.svg" alt=""></div>
-                            </div>
-                            <div class="box_title">Working Hours</div>
-                            <div class="working_hours_list">
-                                <ul>
-                                    <li class="d-flex flex-row align-items-center justify-content-start">
-                                        <div>Monday – Friday</div>
-                                        <div class="ml-auto">8.00 – 19.00</div>
-                                    </li>
-                                    <li class="d-flex flex-row align-items-center justify-content-start">
-                                        <div>Saturday</div>
-                                        <div class="ml-auto">9.30 – 17.00</div>
-                                    </li>
-                                    <li class="d-flex flex-row align-items-center justify-content-start">
-                                        <div>Sunday</div>
-                                        <div class="ml-auto">9.30 – 15.00</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -261,93 +235,17 @@
     <!-- Footer -->
 
     <footer class="footer">
-        <div class="footer_container">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Footer - About -->
-                    <div class="col-lg-4 footer_col">
-                        <div class="footer_about">
-                            <div class="footer_logo_container">
-                                <a href="#" class="d-flex flex-column align-items-center justify-content-center">
-                                    <div class="logo_content">
-                                        <div class="logo d-flex flex-row align-items-center justify-content-center">
-                                            <div class="logo_text">Care<span>Med</span></div>
-                                            <div class="logo_box">+</div>
-                                        </div>
-                                        <div class="logo_sub">Health Care Center</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="footer_about_text">
-                                <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Curabitur ante leo, finibus
-                                    quis est ut, tempor tincidunt ipsum.</p>
-                            </div>
-                            <ul class="footer_about_list">
-                                <li>
-                                    <div class="footer_about_icon"><img src="images/phone-call.svg" alt=""></div>
-                                    <span>+45 677 8993000 223</span></li>
-                                <li>
-                                    <div class="footer_about_icon"><img src="images/envelope.svg" alt=""></div>
-                                    <span>info@zefizorg.nl</span></li>
-                                <li>
-                                    <a href="https://www.google.com/search?q=Nevelgaarde+8+3436+ZZ+Nieuwegein&rlz=1C1ONGR_nlNL951NL951&oq=Nevelgaarde+8+3436+ZZ+Nieuwegein&aqs=chrome..69i57.547j0j7&sourceid=chrome&ie=UTF-8">
-                                        <span>Nevelgaarde 8 3436 ZZ Nieuwegein</span>
-                                    </a>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Footer - Links -->
-                    <div class="col-lg-4 footer_col">
-                        <div class="footer_links footer_column">
-                            <div class="footer_title">Menu</div>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">Over ons</a></li>
-                                <li><a href="services.html">Voor wie</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Footer - News -->
-                    <div class="col-lg-4 footer_col">
-                        <div class="footer_news footer_column">
-                            <div class="footer_title">Useful Links</div>
-                            <ul>
-                                <li>
-                                    <div class="footer_news_title"><a href="news.html">Aliquam ac eleifend metus</a>
-                                    </div>
-                                    <div class="footer_news_date">March 10, 2018</div>
-                                </li>
-                                <li>
-                                    <div class="footer_news_title"><a href="news.html">Donec in libero sit amet mi
-                                        vulputate</a></div>
-                                    <div class="footer_news_date">March 10, 2018</div>
-                                </li>
-                                <li>
-                                    <div class="footer_news_title"><a href="news.html">Aliquam ac eleifend metus</a>
-                                    </div>
-                                    <div class="footer_news_date">March 10, 2018</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="copyright">
             <div class="container">
                 <div class="row">
                     <div class="col">
                         <div class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
-                            <div class="cr">
+                            <div class="cr" style="margin: 0 auto;">
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                                 All rights reserved | This template is made with
                                 <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-                                    href="https://colorlib.com" target="_blank">Colorlib</a>
+                                        href="https://colorlib.com" target="_blank">Colorlib</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </div>
                             <!-- <div class="footer_social ml-lg-auto">
