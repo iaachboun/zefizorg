@@ -83,7 +83,6 @@ if (isset($_POST["bedrijfnaam"])) {
                                     <div class="logo_line"></div>
                                     <div class="logo d-flex flex-row align-items-center justify-content-center">
                                         <div class="logo_text">Zefi<span>Zorg</span></div>
-                                        <div class="logo_box">+</div>
                                     </div>
                                     <div class="logo_sub">Zelfstandig - empatisch - flexibel - inovatief</div>
                                 </div>
@@ -220,7 +219,7 @@ if (isset($_POST["bedrijfnaam"])) {
                             <div class="input_container">
                                 <label for="vraagContact">Bericht</label>
                                 <textarea name="vraagContact" id="vraagContact" class="contact_input contact_text_area"
-                                          placeholder="Beschrijf je vraag"
+                                          placeholder="Bericht"
                                           required="required"></textarea>
                             </div>
                             <button type="submit" name="submit" value="Submit" class="button contact_button">

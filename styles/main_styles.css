@@ -357,7 +357,7 @@ section {
 
 .emergencies {
     height: 100%;
-    background: #ff0030;
+    background: #20d34a;
     color: #FFFFFF;
     font-size: 14px;
     font-weight: 700;
@@ -499,8 +499,8 @@ section {
 
 .logo_sub {
     font-size: 14px;
-    font-weight: 400;
-    color: #8f8e8e;
+    font-weight: bold;
+    color: #9A80DF;
     padding-left: 3px;
     margin-top: 2px;
 }
@@ -700,7 +700,7 @@ section {
 .home_title h1 {
     font-size: 69.24px;
     font-weight: 900;
-    color: white;
+    color: whitesmoke;
     line-height: 1.0398;
     max-width: 750px;
 }
@@ -1202,13 +1202,13 @@ section {
 .cta_content h2 {
     font-size: 48px;
     font-weight: 700;
-    color: #FFFFFF;
+    color: #323232 !important;
 }
 
 .cta_content p {
     font-size: 14px;
     font-weight: 500;
-    color: #FFFFFF;
+    color: #323232;
     margin-top: -3px;
 }
 
@@ -1435,4 +1435,8 @@ section {
     .text_section_image img {
         display: none;
     }
+}
+
+.footerBackColor {
+    background: linear-gradient(321deg, rgba(40,50,144) 13%, rgba(12,237,233,0.14751838235294112) 65%, rgba(32,211,74,1) 100%);
 }

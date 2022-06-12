@@ -350,10 +350,12 @@ section {
 .top_bar_item:first-child {
     margin-left: 37px;
 }
-
+.footerBackColor {
+    background: linear-gradient(321deg, rgba(40,50,144) 13%, rgba(12,237,233,0.14751838235294112) 65%, rgba(32,211,74,1) 100%);
+}
 .emergencies {
     height: 100%;
-    background: #ff0030;
+    background: #20d34a;
     color: #FFFFFF;
     font-size: 14px;
     font-weight: 700;
