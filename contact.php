@@ -82,9 +82,9 @@ if (isset($_POST["bedrijfnaam"])) {
                                 <div class="logo_content d-flex flex-column align-items-start justify-content-center">
                                     <div class="logo_line"></div>
                                     <div class="logo d-flex flex-row align-items-center justify-content-center">
-                                        <div class="logo_text">Zefi<span>Zorg</span></div>
+                                        <div class="logo_text"><img src="images/28cad8ba02ce46109e46df013f291705.png"></div>
                                     </div>
-                                    <div class="logo_sub">Zelfstandig - empatisch - flexibel - inovatief</div>
+                                    <div class="logo_sub">zelfstandig - empatisch - flexibel - inovatief</div>
                                 </div>
                             </a>
                         </div>
@@ -242,9 +242,9 @@ if (isset($_POST["bedrijfnaam"])) {
                             <div class="cr" style="margin: 0 auto;">
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                                All rights reserved | This template is made with
+                                ZefiZorg | All rights reserved <!--| This template is made with
                                 <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-                                        href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    href="https://colorlib.com" target="_blank">Colorlib</a>-->
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </div>
                             <!-- <div class="footer_social ml-lg-auto">

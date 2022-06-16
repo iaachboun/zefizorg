@@ -65,7 +65,7 @@ ul {
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 18px !important;
     line-height: 2;
     font-weight: 500;
     color: #696969;
@@ -787,8 +787,9 @@ section {
     color: white;
     float: left;
     margin: -27px 0 0 0;
-    width: 200px;
+    width: 250px;
     text-align: left;
+    font-size: 15px !important;
 }
 
 .zorggebieden_container .setBack {

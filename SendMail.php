@@ -1,6 +1,6 @@
 <?php
-$to = 'ili.aachboun1@gmail.com';
-$subject = 'ZefiZorg ' . $_POST['bedrijfnaam'];
+$to = 'info@zefizorg.nl';
+$subject = 'ZefiZorg - Contact: ' . $_POST['bedrijfnaam'];
 $message = "Bedrijfsnaam: " . $_POST['bedrijfnaam'] . "\n" .
     "email: " . $_POST['emailContact'] . "\n" .
     "Naam: " . $_POST['naamContact'] . "\n" .
@@ -13,6 +13,4 @@ $headers = 'From: ' . $_POST['naamContact'] . "\r\n" .
 
 mail($to, $subject, $message, $headers);
 header("Location: contact.php");
-die();
-
 ?>

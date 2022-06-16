@@ -86,10 +86,6 @@
         display: none;
     }
 
-    .logo_container {
-        width: 181px;
-    }
-
     .logo_content {
         padding-left: 28px;
     }
@@ -262,10 +258,7 @@
         font-size: 20px;
     }
 
-    .logo_container {
-        width: 141px;
-        height: 77px;
-    }
+
 
     .logo_content {
         padding-left: 20px;
