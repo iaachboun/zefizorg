@@ -1,129 +1,3 @@
-<?php
-$postData = $uploadedFile = $statusMsg = '';
-$msgClass = 'errordiv';
-if(isset($_POST['submit'])){
-    // Get the submitted form data
-    $postData = $_POST;
-    $email = $_POST['email'];
-    $name = $_POST['name'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
-
-    // Check whether submitted data is not empty
-    if(!empty($email) && !empty($name) && !empty($subject) && !empty($message)){
-
-        // Validate email
-        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
-            $statusMsg = 'Please enter your valid email.';
-        }else{
-            $uploadStatus = 1;
-
-            // Upload attachment file
-            if(!empty($_FILES["attachment"]["name"])){
-
-                // File path config
-                $targetDir = "uploads/";
-                $fileName = basename($_FILES["attachment"]["name"]);
-                $targetFilePath = $targetDir . $fileName;
-                $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
-
-                // Allow certain file formats
-                $allowTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg');
-                if(in_array($fileType, $allowTypes)){
-                    // Upload file to the server
-                    if(move_uploaded_file($_FILES["attachment"]["tmp_name"], $targetFilePath)){
-                        $uploadedFile = $targetFilePath;
-                    }else{
-                        $uploadStatus = 0;
-                        $statusMsg = "Sorry, there was an error uploading your file.";
-                    }
-                }else{
-                    $uploadStatus = 0;
-                    $statusMsg = 'Sorry, only PDF, DOC, JPG, JPEG, & PNG files are allowed to upload.';
-                }
-            }
-
-            if($uploadStatus == 1){
-
-                // Recipient
-                $toEmail = 'ili.aachboun1@gmail.com';
-
-                // Sender
-                $from = 'sender@example.com';
-                $fromName = 'CodexWorld';
-
-                // Subject
-                $emailSubject = 'Contact Request Submitted by '.$name;
-
-                // Message
-                $htmlContent = '<h2>Contact Request Submitted</h2>
-                    <p><b>Name:</b> '.$name.'</p>
-                    <p><b>Email:</b> '.$email.'</p>
-                    <p><b>Subject:</b> '.$subject.'</p>
-                    <p><b>Message:</b><br/>'.$message.'</p>';
-
-                // Header for sender info
-                $headers = "From: $fromName"." <".$from.">";
-
-                if(!empty($uploadedFile) && file_exists($uploadedFile)){
-
-                    // Boundary
-                    $semi_rand = md5(time());
-                    $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
-
-                    // Headers for attachment
-                    $headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
-
-                    // Multipart boundary
-                    $message = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
-                        "Content-Transfer-Encoding: 7bit\n\n" . $htmlContent . "\n\n";
-
-                    // Preparing attachment
-                    if(is_file($uploadedFile)){
-                        $message .= "--{$mime_boundary}\n";
-                        $fp =    @fopen($uploadedFile,"rb");
-                        $data =  @fread($fp,filesize($uploadedFile));
-                        @fclose($fp);
-                        $data = chunk_split(base64_encode($data));
-                        $message .= "Content-Type: application/octet-stream; name=\"".basename($uploadedFile)."\"\n" .
-                            "Content-Description: ".basename($uploadedFile)."\n" .
-                            "Content-Disposition: attachment;\n" . " filename=\"".basename($uploadedFile)."\"; size=".filesize($uploadedFile).";\n" .
-                            "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
-                    }
-
-                    $message .= "--{$mime_boundary}--";
-                    $returnpath = "-f" . $email;
-
-                    // Send email
-                    $mail = mail($toEmail, $emailSubject, $message, $headers, $returnpath);
-
-                    // Delete attachment file from the server
-                    @unlink($uploadedFile);
-                }else{
-                    // Set content-type header for sending HTML email
-                    $headers .= "\r\n". "MIME-Version: 1.0";
-                    $headers .= "\r\n". "Content-type:text/html;charset=UTF-8";
-
-                    // Send email
-                    $mail = mail($toEmail, $emailSubject, $htmlContent, $headers);
-                }
-
-                // If mail sent
-                if($mail){
-                    $statusMsg = 'Your contact request has been submitted successfully !';
-                    $msgClass = 'succdiv';
-
-                    $postData = '';
-                }else{
-                    $statusMsg = 'Your contact request submission failed, please try again.';
-                }
-            }
-        }
-    }else{
-        $statusMsg = 'Please fill all the fields.';
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -279,38 +153,50 @@ if(isset($_POST['submit'])){
                 <!-- Contact Form -->
                 <div class="col-md-6 form_col aanmeldForm">
                     <div class="contact_form_container">
-                        <!-- Display submission status -->
-                        <?php if (!empty($statusMsg)) { ?>
-                            <p class="statusMsg <?php echo !empty($msgClass) ? $msgClass : ''; ?>"><?php echo $statusMsg; ?></p>
-                        <?php } ?>
-
-                        <!-- Display contact form -->
-                        <form method="post" action="" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <input type="text" name="name" class="form-control"
-                                       value="<?php echo !empty($postData['name']) ? $postData['name'] : ''; ?>"
-                                       placeholder="Name" required="">
+                        <form method="post" action="SendMailAanmelden.php" id="contact_form" class="contact_form"
+                              enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-6 input_col">
+                                    <div class="input_container input_name">
+                                        <label for="Voornaam">Voornaam</label>
+                                        <input name="Voornaam" id="Voornaam" type="text" class="contact_input"
+                                               placeholder="Naam">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 input_col">
+                                    <div class="input_container input_name">
+                                        <label for="Achternaam">Achternaam</label>
+                                        <input name="Achternaam" id="Achternaam" type="text" class="contact_input"
+                                               placeholder="Naam">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control"
-                                       value="<?php echo !empty($postData['email']) ? $postData['email'] : ''; ?>"
-                                       placeholder="Email address" required="">
+                            <div class="row">
+                                <div class="col-md-6 input_col">
+                                    <div class="input_container input_number">
+                                        <label for="emailContact">E-mail</label>
+                                        <input name="emailContact" id="emailContact" type="email" class="contact_input"
+                                               placeholder="E-mail"
+                                               required="required">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 input_col">
+                                    <div class="input_container">
+                                        <label for="nmbContact">Telefoonnummer </label>
+                                        <input name="nmbContact" id="nmbContact" type="number" class="contact_input"
+                                               placeholder="Telefoonnummer"
+                                               required="required">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="text" name="subject" class="form-control"
-                                       value="<?php echo !empty($postData['subject']) ? $postData['subject'] : ''; ?>"
-                                       placeholder="Subject" required="">
+                            <div class="row">
+                                <div class="col-md-6 input_col">
+                                    <label for="CVupload">CV </label>
+                                    <input id="CVupload" type="file" name="attachment" class="form-control">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                    <textarea name="message" class="form-control" placeholder="Write your message here"
-                                              required=""><?php echo !empty($postData['message']) ? $postData['message'] : ''; ?></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="file" name="attachment" class="form-control">
-                            </div>
-                            <div class="submit">
-                                <input type="submit" name="submit" class="btn" value="SUBMIT">
-                            </div>
+                            <button type="submit" name="submit" value="Submit" class="button contact_button">
+                                <a>Verstuur</a></button>
                         </form>
                     </div>
                 </div>

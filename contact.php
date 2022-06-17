@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST["bedrijfnaam"])) {
+if (isset($_POST['naamContact'])) {
     require "SendMail.php";
     echo "<div>test</div>";
 }
@@ -82,7 +82,8 @@ if (isset($_POST["bedrijfnaam"])) {
                                 <div class="logo_content d-flex flex-column align-items-start justify-content-center">
                                     <div class="logo_line"></div>
                                     <div class="logo d-flex flex-row align-items-center justify-content-center">
-                                        <div class="logo_text"><img src="images/28cad8ba02ce46109e46df013f291705.png"></div>
+                                        <div class="logo_text"><img src="images/28cad8ba02ce46109e46df013f291705.png">
+                                        </div>
                                     </div>
                                     <div class="logo_sub">zelfstandig - empatisch - flexibel - inovatief</div>
                                 </div>
