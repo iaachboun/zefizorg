@@ -4,9 +4,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require 'vendor/PHPMailer/phpmailer/src/Exception.php';
-require 'vendor/PHPMailer/phpmailer/src/PHPMailer.php';
-require 'vendor/PHPMailer/phpmailer/src/SMTP.php';
+require __DIR__ . '/vendor/phpmailer/phpmailer/src/Exception.php';
+require __DIR__ . '/vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require __DIR__ . '/vendor/phpmailer/phpmailer/src/SMTP.php';
 
 
 //Create an instance; passing `true` enables exceptions
@@ -66,7 +66,9 @@ try {
     $mail->send();
 
     @unlink($targetFilePath);
+    header('location: /aanmelden.php');
     echo 'Bericht is verstuurd!';
 } catch (Exception $e) {
+    var_dump($e);
     echo "Bericht kon niet verstuurd worden!: {$mail->ErrorInfo}";
 }
