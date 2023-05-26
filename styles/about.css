@@ -473,6 +473,10 @@ section
 	margin: 0 auto;
 }
 
+.logo_text img {
+	max-width: 200px;
+}
+
 .logo_box {
 	display: inline-block;
 	width: 23px;

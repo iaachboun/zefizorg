@@ -76,7 +76,7 @@
                                     <div class="logo_line"></div>
                                     <div class="logo d-flex flex-row align-items-center justify-content-center">
                                         <div class="logo_text"><img
-                                                    src="images/28cad8ba02ce46109e46df013f291705.png"></div>
+                                                    src="images/28cad8ba02ce46109e46df013f291705.jpeg"></div>
                                     </div>
                                     <div class="logo_sub">zelfstandig - empatisch - flexibel - inovatief</div>
                                 </div>
@@ -112,7 +112,8 @@
 
             <div class="menu_extra">
                 <div class="menu_appointment"><a href="contact.php">Maak een afspraak</a></div>
-                <div class="menu_emergencies"><strong style="font-size: 1.3em;">✆</strong> +31 687042813</div>
+                <div class="menu_emergencies"><strong style="font-size: 1.3em;">✆</strong> +31 640719517
+</div>
             </div>
 
         </div>

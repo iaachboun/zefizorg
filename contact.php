@@ -40,7 +40,7 @@ if (isset($_POST['naamContact'])) {
                             <div class="top_bar_item"><a href="contact.php">Maak een afspraak</a></div>
                             <div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto">
                                 <div class="home_about_icon"><img src="images/phone-call.svg" alt=""></div>
-                                +31 687042813
+                                +31 640719517
 
                             </div>
                         </div>
@@ -82,7 +82,7 @@ if (isset($_POST['naamContact'])) {
                                 <div class="logo_content d-flex flex-column align-items-start justify-content-center">
                                     <div class="logo_line"></div>
                                     <div class="logo d-flex flex-row align-items-center justify-content-center">
-                                        <div class="logo_text"><img src="images/28cad8ba02ce46109e46df013f291705.png">
+                                        <div class="logo_text"><img src="images/28cad8ba02ce46109e46df013f291705.jpeg">
                                         </div>
                                     </div>
                                     <div class="logo_sub">zelfstandig - empatisch - flexibel - inovatief</div>
@@ -119,7 +119,8 @@ if (isset($_POST['naamContact'])) {
 
             <div class="menu_extra">
                 <div class="menu_appointment"><a href="contact.php">Maak een afspraak</a></div>
-                <div class="menu_emergencies"><strong style="font-size: 1.3em;">✆</strong> +31 687042813</div>
+                <div class="menu_emergencies"><strong style="font-size: 1.3em;">✆</strong> +31 640719517
+</div>
             </div>
 
         </div>
@@ -165,7 +166,7 @@ if (isset($_POST['naamContact'])) {
                     <ul class="contact_about_list">
                         <li>
                             <div class="contact_about_icon"><img src="images/phone-call.svg" alt=""></div>
-                            <span>+31 687042813</span></li>
+                            <span>+31 640719517</span></li>
                         <li>
                             <div class="contact_about_icon"><img src="images/envelope.svg" alt=""></div>
                             <span>info@zefizorg.nl</span></li>

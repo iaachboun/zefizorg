@@ -749,6 +749,79 @@ section {
 }
 
 /*********************************
+7. Testimonials
+*********************************/
+
+.testimonials {
+    width: 100%;
+    padding-top: 94px;
+    padding-bottom: 95px;
+}
+
+.testimonials_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.test_row {
+    margin-top: 57px;
+}
+
+.testimonial {
+    width: 100%;
+}
+
+.test_icon {
+    width: 45px;
+    height: 45px;
+    background: #20d34a;
+}
+
+.test_text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-style: italic;
+    margin-top: 34px;
+    line-height: 1.77;
+}
+
+.test_author {
+    margin-top: 46px;
+}
+
+.test_author_image div {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.test_author_image div img {
+    max-width: 100%;
+}
+
+.test_author_name {
+    /*padding-left: 20px;*/
+}
+
+.test_author_name a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-style: italic;
+}
+
+.test_author_name span {
+    color: #20d34a;
+    font-style: italic;
+}
+
+
+/*********************************
 - Zorggebieden
 *********************************/
 
@@ -759,6 +832,10 @@ section {
     padding-bottom: 75px;
     color: white;
 
+}
+
+.logo_text img {
+    max-width: 200px;
 }
 
 .zorggebieden_container h1 {
@@ -1439,5 +1516,5 @@ section {
 }
 
 .footerBackColor {
-    background: linear-gradient(321deg, rgba(40,50,144) 13%, rgba(12,237,233,0.14751838235294112) 65%, rgba(32,211,74,1) 100%);
+    background: linear-gradient(321deg, rgba(40, 50, 144) 13%, rgba(12, 237, 233, 0.14751838235294112) 65%, rgba(32, 211, 74, 1) 100%);
 }

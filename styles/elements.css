@@ -37,6 +37,9 @@
     -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
+.logo_text img {
+    max-width: 200px;
+}
 
 body {
     font-family: 'Roboto', sans-serif;

@@ -46,6 +46,9 @@ body {
     background: #FFFFFF;
     color: #696969;
 }
+.logo_text img {
+    max-width: 200px;
+}
 
 div {
     display: block;

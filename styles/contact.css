@@ -37,6 +37,9 @@
     -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
+.logo_text img {
+    max-width: 200px;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -501,8 +504,8 @@ section {
 
 .logo_sub {
     font-size: 14px;
-    font-weight: 400;
-    color: #8f8e8e;
+    font-weight: bold;
+    color: #9A80DF;
     padding-left: 3px;
     margin-top: 2px;
 }
