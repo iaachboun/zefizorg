@@ -60,7 +60,7 @@ if (isset($_POST['naamContact'])) {
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="about.html">Over ons</a></li>
-                                    <li><a href="zorgaanbieders.html">Voor zorgorganisaties</a></li>
+                                    <li><a href="zorgorganisaties.html">Voor zorgorganisaties</a></li>
                                     <li><a href="zorgprofessionals.html">Voor zorgprofessionals</a></li>
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
@@ -111,7 +111,7 @@ if (isset($_POST['naamContact'])) {
                 <ul class="menu_list menu_mm">
                     <li class="menu_item menu_mm"><a href="index.html">Home</a></li>
                     <li class="menu_item menu_mm"><a href="about.html">Over ons</a></li>
-                    <li class="menu_item menu_mm"><a href="zorgaanbieders.html">Voor zorgorganisaties</a></li>
+                    <li class="menu_item menu_mm"><a href="zorgorganisaties.html">Voor zorgorganisaties</a></li>
                     <li class="menu_item menu_mm"><a href="zorgprofessionals.html">Voor zorgprofessionals</a></li>
                     <li class="menu_item menu_mm"><a href="contact.php">Contact</a></li>
                 </ul>
@@ -233,38 +233,110 @@ if (isset($_POST['naamContact'])) {
         </div>
     </div>
 
-    <!-- Footer -->
+    <footer class=" text-lg-start  text-muted" style="background-color:#020523;">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
 
-    <footer class="footer">
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
-                            <div class="cr" style="margin: 0 auto;">
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                                ZefiZorg | All rights reserved <!--| This template is made with
-                                <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-                                    href="https://colorlib.com" target="_blank">Colorlib</a>-->
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </div>
-                            <!-- <div class="footer_social ml-lg-auto">
-                                 <ul>
-                                     <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                     <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-                                     <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-                                     <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                 </ul>
-                             </div>-->
-                        </div>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section>
+            <div class="container text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4" style="color: white">
+                            <i class="fas fa-gem me-3 text-secondary " style="color: white !important;"></i> Zefizorg
+                        </h6>
+                        <p style="color: white">
+                            Wilt u ook op de hoogte gehouden worden van alle nieuwsberichten? Meld u dan nu aan voor
+                            onze nieuwsbrief.
+                        </p>
                     </div>
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mb-4" style="color: white">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4" style="color: white">
+                            Paginas
+                        </h6>
+                        <p>
+                            <a href="index.html" class="text-reset" style="color: white">Home</a>
+                        </p>
+                        <p>
+                            <a href="about.html" class="text-reset" style="color: white">Over ons</a>
+                        </p>
+                        <p>
+                            <a href="zorgaanbieders.html" class="text-reset" style="color: white">Voor
+                                zorgorganisaties</a>
+                        </p>
+                        <p>
+                            <a href="zorgprofessionals.html" class="text-reset" style="color: white">Voor
+                                zorgprofessionals</a>
+                        </p>
+                        <p>
+                            <a href="contact.php" class="text-reset" style="color: white">Contact</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4" style="color: white">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Handige links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset" style="color: white">Privacybeleid</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset" style="color: white">Algemene voorwaarden</a>
+                        </p>
+
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Handige links
+                        </h6>
+                        <p>
+                            <img class="text-reset" src="images/NBBU-300x115.png" style="max-width: 120px">
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4" style="color: white">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4" style="color: white">Contact</h6>
+
+                        <p style="color: white">
+                            <i class="fas fa-home me-3 text-secondary" style="color: white !important;"></i>
+                            Nevelgaarde 8, 3436 ZZ Nieuwegein</p>
+                        <p style="color: white">
+                            <i class="fas fa-envelope me-3 text-secondary" style="color: white !important;"></i>
+                            info@zefizorg.nl
+                        </p>
+                        <p style="color: white"><i class="fas fa-phone me-3 text-secondary" style="color: white !important;"></i> +31 640719517</p>
+                        <p style="color: white"><i class="fa-solid fa-clock me-3 text-secondary" style="color: white !important;"></i> MA - VR : 08:00 - 17:00</p>
+                        <p style="color: white"><i class="fa-solid fa-pen me-3 text-secondary" style="color: white !important;"></i> 86418912</p>
+                    </div>
+                    <!-- Grid column -->
                 </div>
+                <!-- Grid row -->
             </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025); color: white">
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+            ZefiZorg | All rights reserved
+            <!-- Copyright -->
         </div>
     </footer>
+
 </div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
