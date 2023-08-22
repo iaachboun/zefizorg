@@ -53,7 +53,7 @@
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="about.html">Over ons</a></li>
-                                    <li><a href="zorgaanbieders.html">Voor zorgaanbieders</a></li>
+                                    <li><a href="zorgaanbieders.html">Voor zorgorganisaties</a></li>
                                     <li><a href="zorgprofessionals.html">Voor zorgprofessionals</a></li>
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
@@ -104,7 +104,7 @@
                 <ul class="menu_list menu_mm">
                     <li class="menu_item menu_mm"><a href="index.html">Home</a></li>
                     <li class="menu_item menu_mm"><a href="about.html">Over ons</a></li>
-                    <li class="menu_item menu_mm"><a href="zorgaanbieders.html">Voor zorgaanbieders</a></li>
+                    <li class="menu_item menu_mm"><a href="zorgaanbieders.html">Voor zorgorganisaties</a></li>
                     <li class="menu_item menu_mm"><a href="zorgprofessionals.html">Voor zorgprofessionals</a></li>
                     <li class="menu_item menu_mm"><a href="contact.php">Contact</a></li>
                 </ul>
