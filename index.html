@@ -136,7 +136,9 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="home_content_inner">
-                                        <div class="home_title"><h1>Samen met Zefi centraal voor de zorg</h1></div>
+
+                                        <div class="home_title"><h1 id="str"></h1></div>
+                                        <!--                                        <div class="home_title"><h1>Samen met Zefi centraal voor de zorg</h1></div>-->
                                         <div class="home_text">
                                             <p>Wij bieden zorg professionals met expertise in diverse doelgroepen. Voor
                                                 hoogwaardige kwalitatieve zorg zowel ad hoc of periodieke diensten bent
@@ -321,7 +323,8 @@
                             zorgverleners. Wij zijn heel blij en dankbaar dat wij bij zefizorg terecht zijn gekomen.
                             Niet alleen bieden zij de juiste zorg die mijn zusje nodig heeft maar streven zij er altijd
                             naar om het beste uit mijn zusje te halen, zelfs als het pad daarheen niet gemakkelijk is.
-                            <br><br>Zij denken in oplossingen, out of the box, zijn altijd bereid om een stapje verder te gaan
+                            <br><br>Zij denken in oplossingen, out of the box, zijn altijd bereid om een stapje verder
+                            te gaan
                             om ons te ontlasten. Kortom, wij zijn erg dankbaar en raden iedereen aan om zorg in te
                             schakelen van Zefi zorg.
                         </div>
@@ -395,6 +398,36 @@
         </div>
     </footer>
 </div>
+
+<script>
+    function runAnimation() {
+        var strings = [
+            "Uw zorg is onze zorg",
+            "Variërende opdrachten en personeel"
+        ];
+        var currentStringIndex = 0;
+        var str = strings[currentStringIndex].split("");
+        var el = document.getElementById('str');
+
+        function animate() {
+            if (str.length > 0) {
+                el.innerHTML += str.shift();
+            } else {
+                el.innerHTML = ""; // Clear the content when the animation is done
+                str = strings[currentStringIndex].split(""); // Reset the string for the next iteration
+                currentStringIndex = (currentStringIndex + 1) % strings.length; // Move to the next string
+            }
+            setTimeout(animate, 90);
+        }
+
+        animate(); // Start the initial animation
+    }
+
+    runAnimation(); // Call the function to start the animation loop
+
+
+</script>
+
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
