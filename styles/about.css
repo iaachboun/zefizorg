@@ -95,11 +95,11 @@ a, a:hover, a:visited, a:active, a:link
 }
 a:hover
 {
-	color: #20d34a !important;
+	color: #10C89F !important;
 }
 ::selection
 {
-	color: #20d34a;
+	color: #10C89F;
 }
 p::selection
 {
@@ -233,7 +233,7 @@ section
 	bottom: 0;
 	width: 100%;
 	height: 3px;
-	background: #20d34a;
+	background: #10C89F;
 	content: '';
 	z-index: 0;
 	-webkit-transition: all 400ms cubic-bezier(.33,.68,.59,.99);
@@ -282,7 +282,7 @@ section
 	top: 0;
 	width: 54px;
 	height: 3px;
-	background: #20d34a;
+	background: #10C89F;
 	content: '';
 }
 .section_title_light h2
@@ -345,7 +345,7 @@ section
 .emergencies
 {
 	height: 100%;
-	background: #20d34a;
+	background:#10C89F;
 	color: #FFFFFF;
 	font-size: 14px;
 	font-weight: 700;
@@ -450,7 +450,7 @@ section
 	bottom: 0;
 	width: 100%;
 	height: 4px;
-	background: #20d34a;
+	background: #10C89F;
 }
 
 .logo {
@@ -458,7 +458,7 @@ section
 }
 
 .logo span {
-	color: #20d34a;
+	color: #10C89F;
 }
 
 .logo_container a .logo:hover {
@@ -481,7 +481,7 @@ section
 	display: inline-block;
 	width: 23px;
 	height: 23px;
-	background: #20d34a;
+	background: #10C89F;
 	color: #FFFFFF;
 	font-size: 24px;
 	line-height: 23px;
@@ -630,7 +630,7 @@ section
 .menu_close_container:hover .menu_close,
 .menu_close_container:hover .menu_close::after
 {
-	background: #20d34a;
+	background: #10C89F;
 }
 .menu_extra
 {
@@ -780,7 +780,7 @@ section
 	bottom: 0;
 	width: 100%;
 	height: 4px;
-	background: #20d34a;
+	background: #10C89F;
 	content: '';
 }
 .box:hover
@@ -834,7 +834,7 @@ section
 {
 	font-size: 30px;
 	font-weight: 400;
-	color: #20d34a;
+	color: #10C89F;
 	margin-top: 20px;
 }
 .box_appointments
@@ -884,7 +884,7 @@ section
 {
 	width: 45px;
 	height: 45px;
-	background: #20d34a;
+	background: #10C89F;
 }
 .test_text
 {
@@ -923,7 +923,7 @@ section
 }
 .test_author_name span
 {
-	color: #20d34a;
+	color: #10C89F;
 	font-style: italic;
 }
 
@@ -1044,7 +1044,7 @@ section
 	left: 0;
 	width: 100%;
 	height: 4px;
-	background: #20d34a;
+	background: #10C89F;
 	content: '';
 }
 .footer_logo_container a
@@ -1085,7 +1085,7 @@ section
 	display: inline-block;
 	width: 31px;
 	height: 31px;
-	background: #20d34a;
+	background: #10C89F;
 	text-align: center;
 	vertical-align: middle;
 }
@@ -1150,7 +1150,7 @@ section
 {
 	font-size: 14px;
 	font-weight: 500;
-	color: #20d34a;
+	color: #10C89F;
 	margin-top: 7px;
 }
 .footer_news ul li:not(:last-child)
@@ -1187,7 +1187,7 @@ section
 }
 .footer_social ul li a i
 {
-	color: #20d34a;
+	color: #10C89F;
 	padding: 5px;
 	font-size: 14px;
 	-webkit-transition: all 200ms ease;
