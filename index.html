@@ -406,24 +406,34 @@
             "Variërende opdrachten en personeel"
         ];
         var currentStringIndex = 0;
-        var str = strings[currentStringIndex].split("");
+        var charIndex = 0;
         var el = document.getElementById('str');
 
         function animate() {
-            if (str.length > 0) {
-                el.innerHTML += str.shift();
+            if (charIndex < strings[currentStringIndex].length) {
+                el.innerHTML += strings[currentStringIndex][charIndex];
+                charIndex++;
             } else {
-                el.innerHTML = ""; // Clear the content when the animation is done
-                str = strings[currentStringIndex].split(""); // Reset the string for the next iteration
-                currentStringIndex = (currentStringIndex + 1) % strings.length; // Move to the next string
+                setTimeout(nextLine, 3000); // Wait for 3 seconds after each line
+                return; // Exit the animation loop temporarily
             }
             setTimeout(animate, 90);
+        }
+
+        function nextLine() {
+            charIndex = 0; // Reset character index
+            el.innerHTML = ""; // Clear the content
+            currentStringIndex = (currentStringIndex + 1) % strings.length; // Move to the next string
+            animate(); // Restart the animation loop
         }
 
         animate(); // Start the initial animation
     }
 
     runAnimation(); // Call the function to start the animation loop
+
+
+
 
 
 </script>
