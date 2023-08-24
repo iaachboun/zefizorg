@@ -55,6 +55,7 @@
                                     <li><a href="about.html">Over ons</a></li>
                                     <li><a href="zorgorganisaties.html">Voor zorgorganisaties</a></li>
                                     <li><a href="zorgprofessionals.html">Voor zorgprofessionals</a></li>
+                                    <li><a href="coaching.html.html">Coaching</a></li>
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </nav>
@@ -106,6 +107,7 @@
                     <li class="menu_item menu_mm"><a href="about.html">Over ons</a></li>
                     <li class="menu_item menu_mm"><a href="zorgorganisaties.html">Voor zorgorganisaties</a></li>
                     <li class="menu_item menu_mm"><a href="zorgprofessionals.html">Voor zorgprofessionals</a></li>
+                    <li class="menu_item menu_mm"><a href="coaching.html">Coaching</a></li>
                     <li class="menu_item menu_mm"><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
