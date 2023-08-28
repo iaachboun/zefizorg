@@ -715,6 +715,7 @@ section {
 .home {
     width: 100%;
     height: 900px;
+    margin: 150px 0 0 0;
 }
 
 .home_slider_container {
@@ -725,7 +726,7 @@ section {
 .home_slider_background {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -750,6 +751,7 @@ section {
     top: 39.8%;
     left: 0;
     width: 100%;
+    z-index: 10;
 }
 
 .home_title h1 {

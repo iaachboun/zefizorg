@@ -312,6 +312,7 @@
 
     .home {
         height: 100vh;
+        top: 0;
     }
 
     .home_content {
