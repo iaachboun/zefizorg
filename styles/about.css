@@ -1203,3 +1203,14 @@ section
 .footerBackColor {
 	background: linear-gradient(321deg, rgba(12,237,233,1) 13%, rgba(12,237,233,0.14751838235294112) 65%, rgba(32,211,74,1) 100%);
 }
+
+.home_slider_background {
+	position: absolute;
+	top: 2pc;
+	right: -6pc;
+	width: 80%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
