@@ -25,6 +25,36 @@ if (isset($_POST['naamContact'])) {
           integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
+<style>
+    /* Style for the popup */
+    .popup {
+        text-align: center;
+        height: 50%;
+        width: 40%;
+
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+        transition: transform 0.5s, opacity 0.5s;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Style for the overlay background */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+</style>
 <body>
 
 <div class="super_container">
@@ -125,7 +155,7 @@ if (isset($_POST['naamContact'])) {
             <div class="menu_extra">
                 <div class="menu_appointment"><a href="contact.php">Maak een afspraak</a></div>
                 <div class="menu_emergencies"><strong style="font-size: 1.3em;">✆</strong> +31 640719517
-</div>
+                </div>
             </div>
 
         </div>
@@ -228,9 +258,16 @@ if (isset($_POST['naamContact'])) {
                                           placeholder="Bericht"
                                           required="required"></textarea>
                             </div>
-                            <button type="submit" name="submit" value="Submit" class="button contact_button">
+                            <button id="submitBtn" type="submit" name="submit" value="Submit" class="button contact_button">
                                 <a>Verstuur</a></button>
                         </form>
+
+                        <div class="overlay" id="overlay"></div>
+                        <div class="popup" id="popup">
+                            <h2>Gelukt!!</h2>
+                            <img src="images/confirmation-image.png" alt="#" style="height: 100%; width: auto; max-height: 235px; max-width: 235px">
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -322,9 +359,12 @@ if (isset($_POST['naamContact'])) {
                             <i class="fas fa-envelope me-3 text-secondary" style="color: white !important;"></i>
                             info@zefizorg.nl
                         </p>
-                        <p style="color: white"><i class="fas fa-phone me-3 text-secondary" style="color: white !important;"></i> +31 640719517</p>
-                        <p style="color: white"><i class="fa-solid fa-clock me-3 text-secondary" style="color: white !important;"></i> MA - VR : 08:00 - 17:00</p>
-                        <p style="color: white"><i class="fa-solid fa-pen me-3 text-secondary" style="color: white !important;"></i> KVK - 86418912</p>
+                        <p style="color: white"><i class="fas fa-phone me-3 text-secondary"
+                                                   style="color: white !important;"></i> +31 640719517</p>
+                        <p style="color: white"><i class="fa-solid fa-clock me-3 text-secondary"
+                                                   style="color: white !important;"></i> MA - VR : 08:00 - 17:00</p>
+                        <p style="color: white"><i class="fa-solid fa-pen me-3 text-secondary"
+                                                   style="color: white !important;"></i> KVK - 86418912</p>
                     </div>
                     <!-- Grid column -->
                 </div>
@@ -352,3 +392,37 @@ if (isset($_POST['naamContact'])) {
 <script src="js/contact.js"></script>
 </body>
 </html>
+
+<script>
+    const overlay = document.getElementById("overlay");
+    const popup = document.getElementById("popup");
+    const submitBtn = document.getElementById("submitBtn");
+
+    // Function to show the popup
+    function showPopup() {
+        overlay.style.display = "block";
+        popup.style.display = "block";
+        setTimeout(() => {
+            popup.style.transform = "translate(-50%, -50%) scale(1)";
+            popup.style.opacity = 1;
+        }, 10);
+    }
+
+    // Function to hide the popup
+    function hidePopup() {
+        popup.style.transform = "translate(-50%, -50%) scale(0.5)";
+        popup.style.opacity = 0;
+        setTimeout(() => {
+            overlay.style.display = "none";
+            popup.style.display = "none";
+        }, 500);
+    }
+
+    // Show the confirmation popup when the submit button is clicked
+    submitBtn.addEventListener("click", () => {
+        showPopup();
+
+        setTimeout(hidePopup, 4000);
+    });
+
+</script>
