@@ -30,7 +30,7 @@ if (isset($_POST['naamContact'])) {
     .popup {
         text-align: center;
         height: 50%;
-        width: 40%;
+        width: 90%;
 
         display: none;
         position: fixed;
@@ -42,6 +42,13 @@ if (isset($_POST['naamContact'])) {
         background-color: #fff;
         padding: 20px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (min-width: 768px) {
+        .popup {
+        height: 50%;
+        width: 40%;
+        }
     }
 
     /* Style for the overlay background */
