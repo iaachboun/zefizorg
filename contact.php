@@ -25,43 +25,6 @@ if (isset($_POST['naamContact'])) {
           integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
-<style>
-    /* Style for the popup */
-    .popup {
-        text-align: center;
-        height: 50%;
-        width: 90%;
-
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0.5);
-        opacity: 0;
-        transition: transform 0.5s, opacity 0.5s;
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    @media (min-width: 768px) {
-        .popup {
-        height: 50%;
-        width: 40%;
-        }
-    }
-
-    /* Style for the overlay background */
-    .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-</style>
 <body>
 
 <div class="super_container">
