@@ -236,7 +236,7 @@ if (isset($_POST['naamContact'])) {
             </div>
         </div>
     </div>
-
+    <p>yo</p>
     <footer class=" text-lg-start  text-muted" style="background-color:#020523;">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
