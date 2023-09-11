@@ -65,8 +65,7 @@ try {
     $mail->send();
 
     @unlink($targetFilePath);
-    header('location: https://zefizorg.nl/aanmelden.php');
-    echo 'Bericht is verstuurd!';
+    header('location: https://zefizorg.nl/aanmelden.php', true, 301); exit;
 } catch (Exception $e) {
     echo "Bericht kon niet verstuurd worden!: {$mail->ErrorInfo}";
 }

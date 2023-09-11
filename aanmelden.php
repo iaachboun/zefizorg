@@ -198,9 +198,14 @@
                                     <input id="CVupload" type="file" name="attachment" class="form-control">
                                 </div>
                             </div>
-                            <button type="submit" name="submit" value="Submit" class="button contact_button">
+                            <button id="submitBtn" type="submit" name="submit" value="Submit" class="button contact_button">
                                 <a>Verstuur</a></button>
                         </form>
+                        <div class="overlay" id="overlay"></div>
+                        <div class="popup" id="popup">
+                            <h2>Gelukt!!</h2>
+                            <img src="images/confirmation-image.png" alt="#" style="height: 100%; width: auto; max-height: 235px; max-width: 235px">
+                        </div>
                     </div>
                 </div>
             </div>
