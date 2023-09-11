@@ -35,7 +35,6 @@ try {
         $targetDir = "uploads/";
         $fileName = basename($_FILES["attachment"]["name"]);
         $targetFilePath = $targetDir . $fileName;
-        var_dump($targetFilePath);
         $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
         // Allow certain file formats
         $allowTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg');
@@ -69,6 +68,5 @@ try {
     header('location: https://zefizorg.nl/aanmelden.php');
     echo 'Bericht is verstuurd!';
 } catch (Exception $e) {
-    var_dump($e);
     echo "Bericht kon niet verstuurd worden!: {$mail->ErrorInfo}";
 }
