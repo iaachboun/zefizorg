@@ -65,8 +65,8 @@ try {
     $mail->send();
 
     @unlink($targetFilePath);
-    echo "<script type='text/javascript'>window.top.location='http://zefizorg.nl/';</script>"; exit;
+    echo "<script type='text/javascript'>window.top.location='http://zefizorg.nl/zorgprofessionals.html';</script>"; exit;
 } catch (Exception $e) {
     echo "Bericht kon niet verstuurd worden!: {$mail->ErrorInfo}";
-    echo "<script type='text/javascript'>window.top.location='http://zefizorg.nl/';</script>"; exit;
+    echo "<script type='text/javascript'>window.top.location='http://zefizorg.nl/zorgprofessionals.html';</script>"; exit;
 }
