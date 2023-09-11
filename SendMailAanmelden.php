@@ -65,7 +65,7 @@ try {
     $mail->send();
 
     @unlink($targetFilePath);
-    header('location: https://zefizorg.nl/aanmelden.php', true, 301); exit;
+    echo "<script type='text/javascript'>window.top.location='http://zefizorg.nl/';</script>"; exit;
 } catch (Exception $e) {
     echo "Bericht kon niet verstuurd worden!: {$mail->ErrorInfo}";
 }
