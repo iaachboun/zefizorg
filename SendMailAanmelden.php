@@ -68,4 +68,5 @@ try {
     echo "<script type='text/javascript'>window.top.location='http://zefizorg.nl/';</script>"; exit;
 } catch (Exception $e) {
     echo "Bericht kon niet verstuurd worden!: {$mail->ErrorInfo}";
+    echo "<script type='text/javascript'>window.top.location='http://zefizorg.nl/';</script>"; exit;
 }
